@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Around Me</string>
+    <string name="title_activity_main">Around Me</string>
+    <string name="package_name">me.aroundme.lome</string>
+    <string name="custom_url_scheme">me.aroundme.lome</string>
+</resources>

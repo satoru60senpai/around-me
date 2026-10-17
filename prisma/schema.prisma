@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Business {
+  id               String   @id @default(cuid())
+  slug             String   @unique
+  name             String
+  category         String
+  tags             String // JSON: string[]
+  description      String
+  neighborhood     String
+  address          String
+  lat              Float
+  lng              Float
+  phone            String
+  whatsapp         Boolean  @default(true)
+  image            String
+  rating           Float
+  reviews          Int
+  priceHint        String?
+  priceUpdatedDays Int      @default(0)
+  verified         Boolean  @default(false)
+  openTime         String // "08:00"
+  closeTime        String // "19:00"
+  daysOpen         String // "mon-sat" | "mon-sun"
+  services         String // JSON: string[]
+  payments         String // JSON: string[]
+  createdAt        DateTime @default(now())
+
+  @@index([category])
+  @@index([neighborhood])
+}
