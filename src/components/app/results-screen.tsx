@@ -141,8 +141,11 @@ export function ResultsScreen() {
       {/* Compteur */}
       <div className="px-5 pt-1">
         <p className="text-[11.5px] text-brun-soft">
-          <b className="text-brun">{isLoading ? '…' : businesses?.length ?? 0} résultats</b> à
-          proximité · triés par {filters.sort === 'distance' ? 'distance' : 'note'}
+          <b className="text-brun">
+            {isLoading ? '…' : businesses?.length ?? 0}{' '}
+            {(businesses?.length ?? 0) > 1 ? 'résultats' : 'résultat'}
+          </b>{' '}
+          à proximité · triés par {filters.sort === 'distance' ? 'distance' : 'note'}
         </p>
       </div>
 

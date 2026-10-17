@@ -121,3 +121,21 @@ Work Log:
 
 Stage Summary:
 - Toutes les interactions principales validées en conditions réelles avant livraison.
+
+---
+Task ID: 7
+Agent: Z.Code (orchestrateur)
+Task: Publication GitHub + Release APK
+
+Work Log:
+- README.md complet (stack, démarrage, build APK, iOS, structure).
+- Token GitHub testé (compte satoru60senpai). Repo "around-me" existant → passé en public (PATCH).
+- .gitignore enrichi (android build, *.apk, db/). Commit + rebase sur l'initial commit distant (conflit README résolu : version projet conservée, LICENSE conservée).
+- Push main → https://github.com/satoru60senpai/around-me
+- Release v0.1.0 créée + upload AroundMe-v0.1.0.apk (5 229 551 octets, état "uploaded").
+- Téléchargement public vérifié (HTTP 200). Token jamais persisté dans le repo ni la config git.
+
+Stage Summary:
+- Code : https://github.com/satoru60senpai/around-me
+- APK : https://github.com/satoru60senpai/around-me/releases/download/v0.1.0/AroundMe-v0.1.0.apk
+- Micro-correction finale : "1 résultat" (singulier) après re-vérification navigateur (catégorie Café → 1 résultat, 0 erreur console).
