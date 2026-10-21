@@ -1,0 +1,22 @@
+{
+  "name": "Around Me — développement",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "postCreateCommand": "sudo npm install -g bun && bun install && bunx prisma generate",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Around Me (Next.js)",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+  "remoteUser": "node"
+}
